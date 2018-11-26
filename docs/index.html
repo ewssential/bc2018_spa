@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><h1>Single Page Applications</h1></section>
+        <section>
+          <h3>MPA vs SPA</h3>
+          <h3>How does Single Page Applications works?</h3>
+        </section>
+        <section>
+          <section><h1>MPA vs SPA</h1></section>
+          <section>
+            <style>
+              #how-spa-work-data-transfer-foreward {
+                background-image: linear-gradient(
+                  to right,
+                  silver 50%,
+                  transparent 0%
+                );
+                background-size: 8px 4px;
+                background-repeat: repeat-x;
+                height: 90px;
+                width: 100%;
+                animation-name: border-dance-foreward;
+                animation-duration: 20s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+              }
+              #how-spa-work-data-transfer-backward {
+                background-image: linear-gradient(
+                  to right,
+                  silver 50%,
+                  transparent 0%
+                );
+                background-size: 8px 4px;
+                background-repeat: repeat-x;
+                height: 90px;
+                width: 100%;
+                animation-name: border-dance-backward;
+                animation-duration: 20s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+              }
+              @keyframes border-dance-foreward {
+                from {
+                  background-position: 0% bottom;
+                }
+                to {
+                  background-position: 100% bottom;
+                }
+              }
+              @keyframes border-dance-backward {
+                from {
+                  background-position: 100% bottom;
+                }
+                to {
+                  background-position: 0% bottom;
+                }
+              }
+              #how-spa-work {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                justify-content: center;
+              }
+
+              #how-spa-work-transfer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 30%;
+              }
+            </style>
+            <div id="how-spa-work">
+              <img width="20%" src="img/mobile.svg" alt="mobile" />
+              <div id="how-spa-work-transfer">
+                <div id="how-spa-work-data-transfer-foreward"></div>
+
+                <div id="how-spa-work-data-transfer-backward"></div>
+              </div>
+
+              <img width="20%" src="img/server.svg" alt="server" />
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+</html>
