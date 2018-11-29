@@ -6,7 +6,7 @@
  * Copyright (C) 2018 Hakim El Hattab, http://hakim.se
  */
 /*********************************************
- * RESET STYLES
+ * RESET STYLES 
  *********************************************/
 html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal iframe,
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal blockquote, .reveal pre,
@@ -14,7 +14,8 @@ html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal i
 .reveal del, .reveal dfn, .reveal em, .reveal img, .reveal ins, .reveal kbd, .reveal q, .reveal s, .reveal samp,
 .reveal small, .reveal strike, .reveal strong, .reveal sub, .reveal sup, .reveal tt, .reveal var,
 .reveal b, .reveal u, .reveal center,
-.reveal dl, .reveal dt, .reveal dd, .reveal ol, .reveal ul, .reveal li,
+.reveal dl, .reveal dt, .reveal dd, .reveal ol, 
+.reveal ul, .reveal li,
 .reveal fieldset, .reveal form, .reveal label, .reveal legend,
 .reveal table, .reveal caption, .reveal tbody, .reveal tfoot, .reveal thead, .reveal tr, .reveal th, .reveal td,
 .reveal article, .reveal aside, .reveal canvas, .reveal details, .reveal embed,
@@ -1592,10 +1593,98 @@ body {
 
 
 
-
+/* 
   .fragment.current-visible.visible:not(.current-fragment) {
     display: none;
     height:0px;
     line-height: 0px;
     font-size: 0px;
-}
+} */
+
+
+
+
+.reveal .slides section .fragment.step-fade-in-then-out {
+	opacity: 0;
+	display: none; }
+.reveal .slides section .fragment.step-fade-in-then-out.current-fragment {
+	opacity: 1;
+  display: inline; }
+  
+
+  .reveal .slides section .fragment.step-fade-in {
+    opacity: 0;
+    display: none; }
+  .reveal .slides section .fragment.step-fade-in.current-fragment {
+    opacity: 1;
+    display: inline; }
+
+
+
+  #how-spa-work-data-transfer-foreward {
+    background-image: linear-gradient(to right,
+      silver 50%,
+      transparent 0%);
+    background-size: 8px 4px;
+    background-repeat: repeat-x;
+    height: 90px;
+    width: 100%;
+    animation-name: border-dance-foreward;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #how-spa-work-data-transfer-backward {
+    background-image: linear-gradient(to right,
+      silver 50%,
+      transparent 0%);
+    background-size: 8px 4px;
+    background-repeat: repeat-x;
+    height: 90px;
+    width: 100%;
+    animation-name: border-dance-backward;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin-top: 10px; 
+  }
+
+  @keyframes border-dance-foreward {
+    from {
+      background-position: 0% bottom;
+    }
+
+    to {
+      background-position: 100% bottom;
+    }
+  }
+
+  @keyframes border-dance-backward {
+    from {
+      background-position: 100% bottom;
+    }
+
+    to {
+      background-position: 0% bottom;
+    }
+  }
+
+  #how-spa-work {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  #how-spa-work-transfer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #how-spa-work-transfer-container {
+    width: 100%;
+  }
